@@ -1,14 +1,14 @@
 pipeline{
     tools{
-        jdk 'myjava'
-        maven 'mymaven'
+        jdk 'ourjava'
+        maven 'ourmaven'
     }
 	agent any
       stages{
            stage('Checkout'){
               steps{
 		 echo 'cloning..'
-                 git 'https://github.com/theitern/DevOpsCodeDemo.git'
+                 git 'https://github.com/olujlab/DevOpsCodeDemo.git'
               }
           }
           stage('Compile'){
@@ -20,13 +20,13 @@ pipeline{
           stage('CodeReview'){
               steps{
 		    
-		  echo 'codeReview'
+		  echo 'I am now doing codeReview o'
                   sh 'mvn pmd:pmd'
               }
           }
            stage('UnitTest'){
               steps{
-	         echo 'Testing'
+	         echo 'It is now time for unit Testing'
                   sh 'mvn test'
               }
                post {
