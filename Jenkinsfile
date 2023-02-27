@@ -17,16 +17,16 @@ pipeline{
                   sh 'mvn compile'
 	      }
           }
-          stage('I am now doing codeReview o'){
+          stage('CodeReview'){
               steps{
 		    
-		  echo 'I am now doing codeReview o'
+		  echo 'codeReview'
                   sh 'mvn pmd:pmd'
               }
           }
            stage('UnitTest'){
               steps{
-	         echo 'It is now time for unit Testing'
+	         echo 'It is now time for Unit Testing'
                   sh 'mvn test'
               }
                post {
