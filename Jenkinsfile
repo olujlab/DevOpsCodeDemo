@@ -17,10 +17,10 @@ pipeline{
                   sh 'mvn compile'
 	      }
           }
-          stage('CodeReview'){
+          stage('I am doing CodeReview o'){
               steps{
 		    
-		  echo 'codeReview'
+		  echo 'I am doing codeReview o'
                   sh 'mvn pmd:pmd'
               }
           }
